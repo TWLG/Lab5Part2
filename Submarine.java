@@ -1,5 +1,5 @@
 class Submarine extends LandTransportation {
-    public String vehicleType = "Bus";
+    public String vehicleType = "Submarine";
     public String type;
     public double cost;
     public String purchaseType;
@@ -26,7 +26,7 @@ class Submarine extends LandTransportation {
     }
 
     public String optionDisplay() {
-        return String.format("%-12s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
+        return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
                 purchaseType, avgSpeed + " mph", capacity);
     }
 

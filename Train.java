@@ -28,7 +28,7 @@ class Train extends LandTransportation {
     public String optionDisplay() {
         /* a shorter list of vehicle aspects
         */
-        return String.format("%-12s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
+        return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
                 purchaseType, avgSpeed + " mph", capacity);
     }
 

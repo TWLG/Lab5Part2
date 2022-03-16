@@ -52,15 +52,30 @@ public class TransportationDriver {
                 40, 4, "2/21 1:00 PM", "91 School St. West Hempstead, NY 11552");
 
         // Air Options
+        Dirigible Dirigible = new Dirigible("Goodyear", 125, "Ticket",
+                20, 20, "2/21 4:45 PM", "62 La Sierra Lane Ashburn, VA 20147");
+        Helicopter Helicopter = new Helicopter("Bell", 140, "Rental",
+                40, 5, "2/24 3:30 PM", "62 La Sierra Lane Ashburn, VA 20147");
+        Plane Plane = new Plane("Boeing", 120, "Ticket",
+                575, 60, "2/18 12:15 AM", "62 La Sierra Lane Ashburn, VA 20147");
+        HotAirBalloon HotAirBalloon = new HotAirBalloon("Montgolfier", 70, "Rental",
+                15, 4, "2/21 1:00 PM", "62 La Sierra Lane Ashburn, VA 20147");
 
         // Water Options
+        Boat Boat = new Boat("Bertram", 120, "Rental",
+                25, 8, "2/20 4:30 PM", "4 West Bridle Street Evansville, IN 47711");
+        Ship Ship = new Ship("Evergreen", 200, "Ticket",
+                21, 4500, "2/23 3:30 PM", "4 West Bridle Street Evansville, IN 47711");
+        Submarine Submarine = new Submarine("Subtech", 280, "Ticket", 16,
+                7, "2/19 11:30 AM", "4 West Bridle Street Evansville, IN 47711");
 
         System.out.println("\n What type of transportation do you want to use?");
         Train.displayTypeOptions();
         System.out.println("Pick [1-3]: ");
 
-        int transportationAnswer = input.nextInt();
-        switch (transportationAnswer) {
+        int transportationTypeAnswer = input.nextInt();
+        int transportationMethodAnswer = 0;
+        switch (transportationTypeAnswer) {
             case 1:
                 System.out.print("Land Selected \nOptions Available\n\n    ");
                 Train.tableLabelShort();
@@ -68,15 +83,31 @@ public class TransportationDriver {
                 System.out.println("[2] " + Bike.optionDisplay());
                 System.out.println("[3] " + Bus.optionDisplay());
                 System.out.println("[4] " + Automobile.optionDisplay());
+
+                System.out.print("\n Select method [1-4]: ");
+                transportationMethodAnswer = input.nextInt();
                 break;
             case 2:
-                System.out.println("Air Selected");
+                System.out.print("Air Selected \nOptions Available\n\n    ");
+                Dirigible.tableLabelShort();
+                System.out.println("[1] " + Dirigible.optionDisplay());
+                System.out.println("[2] " + Helicopter.optionDisplay());
+                System.out.println("[3] " + Plane.optionDisplay());
+                System.out.println("[4] " + HotAirBalloon.optionDisplay());
+
+                System.out.print("\n Select method [1-4]: ");
+                transportationMethodAnswer = input.nextInt();
                 break;
             case 3:
-                System.out.println("Water Selected");
+                System.out.print("Water Selected \nOptions Available\n\n    ");
+                Boat.tableLabelShort();
+                System.out.println("[1] " + Boat.optionDisplay());
+                System.out.println("[2] " + Ship.optionDisplay());
+                System.out.println("[3] " + Submarine.optionDisplay());
+
+                System.out.print("\n Select method [1-3]: ");
+                transportationMethodAnswer = input.nextInt();
                 break;
         }
-
-
     }
 }

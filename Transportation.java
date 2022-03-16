@@ -12,7 +12,7 @@
 
      public void tableLabelShort() {
         //Prints a short label intended to use as a label for optionDisplay() table creation
-         System.out.printf("%-12s%-8s%-16s%-16s%-8s", "Vehicle", "Price",
+         System.out.printf("%-14s%-8s%-16s%-16s%-8s", "Vehicle", "Price",
                  "Purchase Type", "Average Speed", "Capacity\n");
      }
 }
