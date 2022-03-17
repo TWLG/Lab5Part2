@@ -1,6 +1,7 @@
-class Plane extends LandTransportation {
+class Plane extends AirTransportation {
 
     public Plane(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
     	this.vehicleType = "Plane";
         this.type = type;
         this.cost = cost;

@@ -1,6 +1,7 @@
-class Dirigible extends LandTransportation {
+class Dirigible extends AirTransportation {
 
     public Dirigible(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
     	this.vehicleType = "Dirigible";
         this.type = type;
         this.cost = cost;

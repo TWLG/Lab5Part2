@@ -1,6 +1,7 @@
-class Boat extends LandTransportation {
+class Boat extends WaterTransportation {
 
     public Boat(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
     	this.vehicleType = "Boat";
         this.type = type;
         this.cost = cost;

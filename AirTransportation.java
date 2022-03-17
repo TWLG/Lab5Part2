@@ -1,7 +1,9 @@
 class AirTransportation extends Transportation {
     public String transportationType = "Air";
     public int numTravelOptions = 4;
-    public void AirTransportation () {
+    public String stationType = "Airport";
+    public AirTransportation () {
+    	super();
     }
 
     // Mutators
@@ -12,6 +14,11 @@ class AirTransportation extends Transportation {
     // Accessors
     public int getNumTravelOptions() {
         return this.numTravelOptions;
+    }
+    
+    @Override
+    public String getStationType() {
+    	return stationType;
     }
 
 }

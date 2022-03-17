@@ -19,10 +19,14 @@
         System.out.println("[3] Water");
     }
 
-     public void tableLabelShort() {
+     public static void tableLabelShort() {
         //Prints a short label intended to use as a label for optionDisplay() table creation
          System.out.printf("%-14s%-8s%-16s%-16s%-8s", "Vehicle", "Price",
                  "Purchase Type", "Average Speed", "Capacity\n");
+     }
+     
+     public String getStationType() {
+    	 return "Not Set";
      }
      
     /**
@@ -136,4 +140,5 @@
 	public void setDepartureLocation(String departureLocation) {
 		this.departureLocation = departureLocation;
 	}
+	
 }

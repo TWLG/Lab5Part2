@@ -1,6 +1,7 @@
-class HotAirBalloon extends LandTransportation {
+class HotAirBalloon extends AirTransportation {
 
     public HotAirBalloon(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
     	this.vehicleType = "HotAirBalloon";
         this.type = type;
         this.cost = cost;
@@ -23,5 +24,10 @@ class HotAirBalloon extends LandTransportation {
         */
         return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
                 purchaseType, avgSpeed + " mph", capacity);
+    }
+    
+    @Override
+    public String getStationType() {
+    	return "Launch zone";
     }
 }

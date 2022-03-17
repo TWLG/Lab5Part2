@@ -1,6 +1,7 @@
 class Bike extends LandTransportation {
 
     public Bike(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
     	this.vehicleType = "Bike";
         this.type = type;
         this.cost = cost;
@@ -21,5 +22,10 @@ class Bike extends LandTransportation {
     public String optionDisplay() {
         return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
                 purchaseType, avgSpeed + " mph", capacity);
+    }
+    
+    @Override
+    public String getStationType() {
+    	return "Bike rental store";
     }
 }

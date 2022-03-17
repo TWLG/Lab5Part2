@@ -1,7 +1,8 @@
 class LandTransportation extends Transportation {
     public String transportationType = "Land";
     public int numTravelOptions = 4;
-    public void LandTransportation () {
+    public LandTransportation () {
+    	super();
     }
 
     // Mutators

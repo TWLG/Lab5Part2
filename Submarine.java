@@ -1,6 +1,7 @@
-class Submarine extends LandTransportation {
+class Submarine extends WaterTransportation {
 
     public Submarine(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
     	this.vehicleType = "Submarine";
         this.type = type;
         this.cost = cost;

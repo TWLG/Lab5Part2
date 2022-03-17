@@ -76,10 +76,11 @@ public class TransportationDriver {
 
         int transportationTypeAnswer = input.nextInt();
         int transportationMethodAnswer = 0;
+        Transportation toUse = null;
         switch (transportationTypeAnswer) {
             case 1:
                 System.out.print("Land Selected \nOptions Available\n\n    ");
-                train.tableLabelShort();
+                Transportation.tableLabelShort();
                 System.out.println("[1] " + train.optionDisplay());
                 System.out.println("[2] " + bike.optionDisplay());
                 System.out.println("[3] " + bus.optionDisplay());
@@ -87,10 +88,21 @@ public class TransportationDriver {
 
                 System.out.print("\n Select method [1-4]: ");
                 transportationMethodAnswer = input.nextInt();
+                //depending on user input set which method they will be using
+                switch(transportationMethodAnswer) {
+                case 1:toUse = train;
+                	break;
+                case 2:toUse = bike;
+                	break;
+                case 3:toUse = bus;
+                	break;
+                case 4:toUse = automobile;
+                	break;
+                }
                 break;
             case 2:
                 System.out.print("Air Selected \nOptions Available\n\n    ");
-                dirigible.tableLabelShort();
+                Transportation.tableLabelShort();
                 System.out.println("[1] " + dirigible.optionDisplay());
                 System.out.println("[2] " + helicopter.optionDisplay());
                 System.out.println("[3] " + plane.optionDisplay());
@@ -98,88 +110,51 @@ public class TransportationDriver {
 
                 System.out.print("\n Select method [1-4]: ");
                 transportationMethodAnswer = input.nextInt();
+               
+                switch(transportationMethodAnswer) {
+                case 1:toUse = dirigible;
+                	break;
+                case 2:toUse = helicopter;
+                	break;
+                case 3:toUse = plane;
+                	break;
+                case 4:toUse = hotAirBalloon;
+                	break;
+                }
                 break;
             case 3:
                 System.out.print("Water Selected \nOptions Available\n\n    ");
-                boat.tableLabelShort();
+                Transportation.tableLabelShort();
                 System.out.println("[1] " + boat.optionDisplay());
                 System.out.println("[2] " + ship.optionDisplay());
                 System.out.println("[3] " + submarine.optionDisplay());
 
                 System.out.print("\n Select method [1-3]: ");
+                
                 transportationMethodAnswer = input.nextInt();
+                
+                switch(transportationMethodAnswer) {
+                case 1:toUse = boat;
+                	break;
+                case 2:toUse = ship;
+                	break;
+                case 3:toUse = submarine;
+                	break;
+                }
                 break;
         }
         
-        //display total cost and travel instructions 
-        double cost = -1;
-        String instructionMessage = "";
-        switch(transportationTypeAnswer) {
-        case 1:
-        	switch(transportationMethodAnswer) {
-            case 1: cost = train.getCost();
-            instructionMessage = "Goto the Train station at " + train.departureLocation + "\n by "
-            + train.getDepartureTime() + "\n";
-            	break;
-            case 2: cost = bus.getCost();
-            instructionMessage = "Goto the Bus station at " + bus.departureLocation + "\n by "
-                    + bus.getDepartureTime() + "\n";
-            	break;
-            case 3: cost = bike.getCost();
-            instructionMessage = "Goto the Bike rental at " + bike.departureLocation + "\n by "
-                    + bike.getDepartureTime() + "\n";
-            	break;
-            case 4: cost = automobile.getCost();
-            instructionMessage = "Get into your car that you left at " + automobile.departureLocation + "\n by "
-                    + automobile.getDepartureTime() + "\n";
-            	break;
-            }
-        	break;
-        case 2:
-        	switch(transportationMethodAnswer) {
-            case 1: cost = dirigible.getCost();
-            instructionMessage = "Goto the Dirigible... Place? at " + dirigible.departureLocation + "\n by "
-                    + dirigible.getDepartureTime() + "\n";
-            	break;
-            case 2: cost = helicopter.getCost();
-            instructionMessage = "Goto the Airport at " + helicopter.departureLocation + "\n by "
-                    + helicopter.getDepartureTime() + "\n";
-            	break;
-            case 3: cost = plane.getCost();
-            instructionMessage = "Goto the Airport at " + plane.departureLocation + "\n by "
-                    + plane.getDepartureTime() + "\n";
-            	break;
-            case 4: cost = hotAirBalloon.getCost();
-            instructionMessage = "Goto the Launch Zone at " + hotAirBalloon.departureLocation + "\n by "
-                    + hotAirBalloon.getDepartureTime() + "\n";
-            	break;
-            }
-        	break;
-        case 3:
-        	switch(transportationMethodAnswer) {
-            case 1: cost = boat.getCost();
-            instructionMessage = "Goto the Marina at " + boat.departureLocation + "\n by "
-                    + boat.getDepartureTime() + "\n";
-            	break;
-            case 2: cost = ship.getCost();
-            instructionMessage = "Goto the Marina at " + ship.departureLocation + "\n by "
-                    + ship.getDepartureTime() + "\n";
-            	break;
-            case 3: cost = submarine.getCost();
-            instructionMessage = "Goto the Submarine rental store at " + submarine.departureLocation + "\n by "
-                    + submarine.getDepartureTime() + "\n";
-            	break;
-            }
-        	break;
-        }
+        int numberOfPassengers = 1;
         
+      
+        //display cost 
         //TODO : when then number of passengers has been queried cost must be multiplied by number of passengers
         System.out.println();
-        System.out.println("Total Cost: " + cost);
+        System.out.println("Total Cost: " + toUse.getCost() * numberOfPassengers);
         //display travel instructions
         System.out.println();
-        System.out.println("Travel Instructions");
-        System.out.println(instructionMessage);
+        System.out.println("Travel Instructions:");
+        System.out.println("Goto " + toUse.getStationType() + " at " + toUse.getDepartureLocation() + " by \n " + toUse.getDepartureTime());
         
         
     }
