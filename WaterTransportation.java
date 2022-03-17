@@ -1,7 +1,10 @@
 class WaterTransportation extends Transportation {
     public String transportationType = "Water";
     public int numTravelOptions = 3;
-    public void WaterTransportation () {
+    public String stationType = "Marina";
+    
+    public WaterTransportation () {
+    	super();
     }
 
     // Mutators
@@ -12,6 +15,11 @@ class WaterTransportation extends Transportation {
     // Accessors
     public int getNumTravelOptions() {
         return this.numTravelOptions;
+    }
+    
+    @Override
+    public String getStationType() {
+    	return stationType;
     }
 
 }

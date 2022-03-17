@@ -1,14 +1,8 @@
-class HotAirBalloon extends LandTransportation {
-    public String vehicleType = "HotAirBalloon";
-    public String type;
-    public double cost;
-    public String purchaseType;
-    public int avgSpeed;
-    public int capacity;
-    public String departureTime;
-    public String departureLocation;
+class HotAirBalloon extends AirTransportation {
 
     public HotAirBalloon(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
+    	super();
+    	this.vehicleType = "HotAirBalloon";
         this.type = type;
         this.cost = cost;
         this.purchaseType = purchaseType;
@@ -31,62 +25,9 @@ class HotAirBalloon extends LandTransportation {
         return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
                 purchaseType, avgSpeed + " mph", capacity);
     }
-
-    // Mutators
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public void setPurchaseType(String purchaseType) {
-        this.purchaseType = purchaseType;
-    }
-
-    public void setAvgSpeed(int avgSpeed) {
-        this.avgSpeed = avgSpeed;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public void setDepartureTime(String departureTime) {
-        this.departureTime = departureTime;
-    }
-
-    public void setDepartureLocation(String departureLocation) {
-        this.departureLocation = departureLocation;
-    }
-
-    // Accessors
-    public String getType() {
-        return this.type;
-    }
-
-    public double getCost() {
-        return this.cost;
-    }
-
-    public String getPurchaseType() {
-        return this.purchaseType;
-    }
-
-    public int getAvgSpeed() {
-        return this.avgSpeed;
-    }
-
-    public int getCapacity() {
-        return this.capacity;
-    }
-
-    public String getDepartureTime(String departureTime) {
-        return this.departureTime;
-    }
-
-    public String getDepartureLocation(String departureLocation) {
-        return this.departureLocation;
+    
+    @Override
+    public String getStationType() {
+    	return "Launch zone";
     }
 }
