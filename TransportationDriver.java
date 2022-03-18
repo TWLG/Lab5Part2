@@ -3,12 +3,8 @@
 Lab #5 Part 2
 Liam Coyle
 Hayden Tuttle
-add your names plz
+Randee Carter
 
- */
-
-
-/*
 CHANGES TO HIERARCHY
 
 Redesigned most of the structure of the lower classes to better fit the purpose, flexibility, and consistency
