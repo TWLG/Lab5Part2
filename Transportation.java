@@ -13,11 +13,19 @@
 
     }
 
-    public void displayTypeOptions() {
+    public static void displayTypeOptions() {
         System.out.println("[1] Land");
         System.out.println("[2] Air");
         System.out.println("[3] Water");
     }
+    
+    public String optionDisplay() {
+        /* a shorter list of vehicle aspects
+        */
+        return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
+                purchaseType, avgSpeed + " mph", capacity);
+    }
+    
 
      public static void tableLabelShort() {
         //Prints a short label intended to use as a label for optionDisplay() table creation

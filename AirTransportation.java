@@ -1,6 +1,6 @@
 class AirTransportation extends Transportation {
     public String transportationType = "Air";
-    public int numTravelOptions = 4;
+    public static int numTravelOptions = 4;
     public String stationType = "Airport";
     public AirTransportation () {
     	super();

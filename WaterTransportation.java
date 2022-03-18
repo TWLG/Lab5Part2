@@ -1,6 +1,6 @@
 class WaterTransportation extends Transportation {
     public String transportationType = "Water";
-    public int numTravelOptions = 3;
+    public static int numTravelOptions = 3;
     public String stationType = "Marina";
     
     public WaterTransportation () {

@@ -1,6 +1,6 @@
 class LandTransportation extends Transportation {
     public String transportationType = "Land";
-    public int numTravelOptions = 4;
+    public static int numTravelOptions = 4;
     public LandTransportation () {
     	super();
     }
