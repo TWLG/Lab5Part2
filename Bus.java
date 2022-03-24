@@ -18,11 +18,6 @@ class Bus extends LandTransportation {
                 purchaseType, avgSpeed + " mph", capacity,
                 departureTime, departureLocation);
     }
-
-    public String optionDisplay() {
-        return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
-                purchaseType, avgSpeed + " mph", capacity);
-    }
     
     @Override
     public String getStationType() {

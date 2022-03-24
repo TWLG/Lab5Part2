@@ -18,13 +18,6 @@ class HotAirBalloon extends AirTransportation {
                 purchaseType, avgSpeed + " mph", capacity,
                 departureTime, departureLocation);
     }
-
-    public String optionDisplay() {
-        /* a shorter list of vehicle aspects
-        */
-        return String.format("%-14s%-8s%-16s%-16s%-12s", vehicleType, "$"+cost,
-                purchaseType, avgSpeed + " mph", capacity);
-    }
     
     @Override
     public String getStationType() {
