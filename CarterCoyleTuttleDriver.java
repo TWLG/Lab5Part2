@@ -70,9 +70,11 @@ public class CarterCoyleTuttleDriver {
         modes[10] = new Submarine("Subtech", 280, "Ticket", 16,
                 7, "2/19 11:30 AM", "4 West Bridle Street Evansville, IN 47711");
 
+        //start prompting user for type input
         System.out.println("\nWhat type of transportation do you want to use?");
         Transportation.displayTypeOptions();
 
+        //get user input for transportation type
         int transportationTypeAnswer = input.nextInt();
         int transportationMethodAnswer = 0;
         Transportation[] subOptions;
@@ -82,6 +84,7 @@ public class CarterCoyleTuttleDriver {
         boolean confirmedAnswer = false;
         int subOptionsIndexTemp;
 
+        //dislay options based on user input
         switch (transportationTypeAnswer) {
             case 1:
                 System.out.print("Land Selected \n\nOptions Available\n");
@@ -100,14 +103,17 @@ public class CarterCoyleTuttleDriver {
                         }
                     }
 
+                    //prompt and get user input for the method of transportation
                     System.out.print("\n Select method [#]: ");
                     transportationMethodAnswer = input.nextInt();
                     toUse = subOptions[transportationMethodAnswer - 1];
 
+                    //ask user to confirm
                     System.out.print("\nAre you sure you want to use: \n");
                     Transportation.tableLabelFull();
                     System.out.println("\n" + toUse.optionDisplayFull());
 
+                    //get user confirmation 
                     System.out.print("\n[1] Yes \n[2] No \n");
                     System.out.print("Enter: ");
                     int transportationMethodConfirm = input.nextInt();
@@ -212,7 +218,7 @@ public class CarterCoyleTuttleDriver {
 
         int numberOfPassengers = 1;
 
-
+        //get number of passengers
         System.out.print("Number of passengers: ");
         numberOfPassengers = input.nextInt();
         //display cost
