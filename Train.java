@@ -1,6 +1,6 @@
 class Train extends LandTransportation {
     
-
+    // constructor
     public Train(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Train";
