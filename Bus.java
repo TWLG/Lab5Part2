@@ -1,5 +1,6 @@
 class Bus extends LandTransportation {
 
+    // constructor
     public Bus(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Bus";
