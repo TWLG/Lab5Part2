@@ -1,5 +1,6 @@
 class Ship extends WaterTransportation {
 
+    // constructor
     public Ship(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Ship";
