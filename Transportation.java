@@ -1,5 +1,6 @@
 class Transportation {
 
+	// instance variables		
     public String type;
     public String vehicleType;
     public double cost;
@@ -9,10 +10,13 @@ class Transportation {
     public String departureTime;
     public String departureLocation;
 
+	// constructor
     public void Transportation() {
 
     }
-
+    /**
+     * displays choices for land, air or water options for user
+     */
     public static void displayTypeOptions() {
         System.out.println("[1] Land"
                 + "\n[2] Air"
@@ -46,7 +50,9 @@ class Transportation {
                 "Purchase Type", "Average Speed", "Capacity", "Departure Time", "Departure Location");
     }
 
-
+    /**
+     * @return the name of the station
+     */
     public String getStationType() {
         return "Not Set";
     }
