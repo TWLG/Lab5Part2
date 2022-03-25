@@ -1,5 +1,6 @@
 class Plane extends AirTransportation {
 
+    // constructor
     public Plane(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Plane";
