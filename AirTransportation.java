@@ -1,7 +1,10 @@
 class AirTransportation extends Transportation {
+    // instance variables
     public String transportationType = "Air";
     public static int numTravelOptions = 4;
     public String stationType = "Airport";
+    
+    // constructor  
     public AirTransportation () {
     	super();
     }
