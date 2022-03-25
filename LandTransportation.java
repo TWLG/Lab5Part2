@@ -1,6 +1,9 @@
 class LandTransportation extends Transportation {
+    // instance variables  
     public String transportationType = "Land";
     public static int numTravelOptions = 4;
+    
+    // constructor
     public LandTransportation () {
     	super();
     }
