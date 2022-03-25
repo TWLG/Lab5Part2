@@ -1,5 +1,6 @@
 class HotAirBalloon extends AirTransportation {
 
+    // constructor
     public HotAirBalloon(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "HotAirBalloon";
