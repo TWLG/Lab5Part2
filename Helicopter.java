@@ -1,5 +1,6 @@
 class Helicopter extends AirTransportation {
 
+    // constructor
     public Helicopter(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Helicopter";
