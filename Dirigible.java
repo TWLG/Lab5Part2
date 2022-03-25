@@ -1,5 +1,6 @@
 class Dirigible extends AirTransportation {
-
+    
+    // constructor
     public Dirigible(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Dirigible";
