@@ -1,5 +1,6 @@
 class Boat extends WaterTransportation {
 
+    // constructor
     public Boat(String type, double cost, String purchaseType, int avgSpeed, int capacity, String departureTime, String departureLocation) {
     	super();
     	this.vehicleType = "Boat";
